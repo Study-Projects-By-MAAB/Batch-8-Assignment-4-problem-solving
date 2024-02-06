@@ -28,12 +28,12 @@ function matchFinder(string1, string2) {
 // console.log(matchFinder('Peter Parker', 'pet'));
 
 // ------------------------------ Problem 3 -------------------------------------
-// const array = [4, 4]
-console.log(sortMaker([2, 3]));
-console.log(sortMaker([4, 2]));
-console.log(sortMaker([4, 4]));
-console.log(sortMaker([1, 2]));
-console.log(sortMaker([4, -2]));
+
+// console.log(sortMaker([2, 3]));
+// console.log(sortMaker([4, 2]));
+// console.log(sortMaker([4, 4]));
+// console.log(sortMaker([1, 2]));
+// console.log(sortMaker([4, -2]));
 
 function sortMaker(arr) {
     let positive = []
@@ -60,3 +60,26 @@ function sortMaker(arr) {
 
 // ------------------------------ Problem 4 -------------------------------------
 
+const object = {
+    street: 10,
+    house: '15A',
+    // society: 'Earth Perfect'
+}
+console.log(findAddress(object));
+
+function findAddress(object3) {
+    let street = object.street      // || "__"
+    let house = object.house        // || "__"
+    let society = object.society    // || "__"
+    if (typeof street === "undefined") {
+        street = '__';
+    }
+    if (typeof house === "undefined") {
+        house = '__';
+    }
+    if (typeof society === "undefined") {
+        society = '__';
+    }
+    const container = street + ',' + house + ',' + society;
+    return container
+}

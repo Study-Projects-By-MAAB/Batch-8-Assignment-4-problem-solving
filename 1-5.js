@@ -8,8 +8,9 @@ function cubeNumber(number) {
     return cube
 }
 
-// console.log(cubeNumber(3));
-// console.log(cubeNumber(4));
+console.log(cubeNumber(3));
+console.log(cubeNumber(4));
+console.log('--------------------------');
 
 // ------------------------------ Problem 2 -------------------------------------
 
@@ -22,18 +23,20 @@ function matchFinder(string1, string2) {
 
 }
 
-// console.log(matchFinder('John Doe', 'ohn'));
-// console.log(matchFinder('JavaScript', 'Code'));
-// console.log(matchFinder('Peter Parker', 'Pen'));
-// console.log(matchFinder('Peter Parker', 'pet'));
+console.log(matchFinder('John Doe', 'ohn'));
+console.log(matchFinder('JavaScript', 'Code'));
+console.log(matchFinder('Peter Parker', 'Pen'));
+console.log(matchFinder('Peter Parker', 'pet'));
+console.log('--------------------------');
 
 // ------------------------------ Problem 3 -------------------------------------
 
-// console.log(sortMaker([2, 3]));
-// console.log(sortMaker([4, 2]));
-// console.log(sortMaker([4, 4]));
-// console.log(sortMaker([1, 2]));
-// console.log(sortMaker([4, -2]));
+console.log(sortMaker([2, 3]));
+console.log(sortMaker([4, 2]));
+console.log(sortMaker([4, 4]));
+console.log(sortMaker([1, 2]));
+console.log(sortMaker([4, -2]));
+console.log('--------------------------');
 
 function sortMaker(arr) {
     let positive = []
@@ -66,6 +69,7 @@ const object = {
     // society: 'Earth Perfect'
 }
 console.log(findAddress(object));
+console.log('--------------------------');
 
 function findAddress(object3) {
     let street = object.street      // || "__"
@@ -82,4 +86,28 @@ function findAddress(object3) {
     }
     const container = street + ',' + house + ',' + society;
     return container
+}
+
+// ------------------------------ Problem 5 -------------------------------------
+
+const khucraArray = [1, 5, 5]
+const dam = 10
+const takaNen = canPay(khucraArray, dam)
+console.log(takaNen);
+
+function canPay(changeArray, totalDue) {
+    let motKhucra = 0;
+    if (changeArray.length === 0) {
+        console.log('Your Array is invalid.');
+    }
+
+    for (const khucra of changeArray) {
+        motKhucra += khucra
+    }
+    if (motKhucra >= totalDue) {
+        return true
+    }
+    else {
+        return false
+    }
 }
